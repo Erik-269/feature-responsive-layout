@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Incidente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Sistema Help Desk</h1>
+    <p>Universidad Técnica de Manabí</p>
+    <p>Registro de incidentes</p>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="reportar.html">Reportar Incidente</a>
+    <a href="tickets.html">Tickets</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>Formulario de Registro</h2>
+
+        <form>
+            <label for="titulo">Título del incidente</label>
+            <input type="text" id="titulo" placeholder="Ingrese el título del incidente" required>
+
+            <label for="categoria">Categoría</label>
+            <select id="categoria" required>
+                <option value="">Seleccione una categoría</option>
+                <option>Red</option>
+                <option>Hardware</option>
+                <option>Software</option>
+            </select>
+
+            <fieldset>
+                <legend>Prioridad</legend>
+
+                <input type="radio" id="alta" name="prioridad">
+                <label for="alta">Alta</label>
+
+                <input type="radio" id="media" name="prioridad">
+                <label for="media">Media</label>
+
+                <input type="radio" id="baja" name="prioridad">
+                <label for="baja">Baja</label>
+            </fieldset>
+
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" rows="5" placeholder="Describa el incidente"></textarea>
+
+            <input type="submit" value="Enviar Incidente">
+            <input type="reset" value="Limpiar">
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Sistema Help Desk - UTM</p>
+</footer>
+
+</body>
+</html>

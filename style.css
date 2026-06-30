@@ -1,0 +1,196 @@
+:root {
+    --primary: #0d47a1;
+    --secondary: #1976d2;
+    --success: #2e7d32;
+    --warning: #f9a825;
+    --danger: #c62828;
+    --light: #f4f7fb;
+    --white: #ffffff;
+    --dark: #1f2937;
+    --gray: #6b7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 28px;
+    color: var(--primary);
+}
+
+form label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background: var(--success);
+}
+
+input[type="reset"] {
+    background: var(--danger);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background: #f9fafb;
+}
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
